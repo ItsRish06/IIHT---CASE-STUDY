@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [openmrs]">
+  <test thread-count="5" name="openmrstesting(failed)">
+    <classes>
+      <class name="openMrs.openMRSrunner">
+        <methods>
+          <include name="runScenario" invocation-numbers="4"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- openMrs.openMRSrunner -->
+    </classes>
+  </test> <!-- openmrstesting(failed) -->
+</suite> <!-- Failed suite [openmrs] -->

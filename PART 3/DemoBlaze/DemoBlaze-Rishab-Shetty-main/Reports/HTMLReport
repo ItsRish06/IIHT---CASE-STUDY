@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.11.0"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"17+35-2724"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1633861948","nanos":398949900}}},{"source":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","data":"@buy\r\nFeature: DemoBlaze Buy Function\r\n\r\n\r\n  Scenario: Test Buy PopUp Window\r\n    Given b-User is into cart\r\n    When b-User clicks PlaceOrder\r\n    Then b-User Gets Popup For Details\r\n\r\n  Scenario Outline: Test online Payment Function\r\n    Given b-User is on cart and Clicks PlaceOrder\r\n    When b-User Enters \u003cname\u003e \u003ccountry\u003e \u003ccity\u003e \u003ccreditCard\u003e \u003cmonth\u003e \u003cyear\u003e\r\n    And b-User Clicks Purchase\r\n    Then b-Validate successful purchase\r\n    Examples:\r\n      |name|country|city|creditCard|month|year|\r\n      |Rishab|India|Mumbai|123456789|April|22|\r\n      |Alex|USA|New York|123456789|January|24|\r\n\r\n\r\n  Scenario Outline: Test Buy Function with invalid data\r\n    Given b-User is on cart and Clicks PlaceOrder\r\n    When b-User Enters \u003cname\u003e \u003ccountry\u003e \u003ccity\u003e \u003ccreditCard\u003e \u003cmonth\u003e \u003cyear\u003e\r\n    And b-User Clicks Purchase\r\n    Then b-validate unsuccessful purchase\r\n    Examples:\r\n      |name|country|city|creditCard|month|year|\r\n      |1234|India|Mumbai|123456789|April|22|\r\n      |Rishab|Mumbai|Mumbai|123456789|April|22|\r\n      |Rishab|India|Maharashtra|123456789|April|22|\r\n      |Rishab|India|Mumbai|asdf|April|22|\r\n      |Rishab|India|Mumbai|123456789|Monday|22|\r\n      |Rishab|India|Mumbai|123456789|April|-122|\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@buy","id":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"language":"en","keyword":"Feature","name":"DemoBlaze Buy Function","children":[{"scenario":{"location":{"line":5,"column":3},"keyword":"Scenario","name":"Test Buy PopUp Window","steps":[{"location":{"line":6,"column":5},"keyword":"Given ","text":"b-User is into cart","id":"bae8d453-7d13-4f33-b8cb-46684ed5ec76"},{"location":{"line":7,"column":5},"keyword":"When ","text":"b-User clicks PlaceOrder","id":"d213b8da-436a-4376-b22d-45d66a62514f"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"b-User Gets Popup For Details","id":"5ac1eeed-8371-4f56-9c48-e8c8cd5c597f"}],"id":"a2d09eac-5813-412a-99c2-8147dae7faa5"}},{"scenario":{"location":{"line":10,"column":3},"keyword":"Scenario Outline","name":"Test online Payment Function","steps":[{"location":{"line":11,"column":5},"keyword":"Given ","text":"b-User is on cart and Clicks PlaceOrder","id":"c95112b7-3cbb-4c3c-8f25-16b26210a2a4"},{"location":{"line":12,"column":5},"keyword":"When ","text":"b-User Enters \u003cname\u003e \u003ccountry\u003e \u003ccity\u003e \u003ccreditCard\u003e \u003cmonth\u003e \u003cyear\u003e","id":"f2bd8d98-8236-4849-ae37-a21ee0e7d374"},{"location":{"line":13,"column":5},"keyword":"And ","text":"b-User Clicks Purchase","id":"46b6345a-82d3-4bab-aeaf-1172e38a81b8"},{"location":{"line":14,"column":5},"keyword":"Then ","text":"b-Validate successful purchase","id":"36302717-7b0b-40e5-82e0-d1c5d34ffb1b"}],"examples":[{"location":{"line":15,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":16,"column":7},"cells":[{"location":{"line":16,"column":8},"value":"name"},{"location":{"line":16,"column":13},"value":"country"},{"location":{"line":16,"column":21},"value":"city"},{"location":{"line":16,"column":26},"value":"creditCard"},{"location":{"line":16,"column":37},"value":"month"},{"location":{"line":16,"column":43},"value":"year"}],"id":"1d252a04-af36-489c-8b50-11b735b12b52"},"tableBody":[{"location":{"line":17,"column":7},"cells":[{"location":{"line":17,"column":8},"value":"Rishab"},{"location":{"line":17,"column":15},"value":"India"},{"location":{"line":17,"column":21},"value":"Mumbai"},{"location":{"line":17,"column":28},"value":"123456789"},{"location":{"line":17,"column":38},"value":"April"},{"location":{"line":17,"column":44},"value":"22"}],"id":"7123daa2-5a5e-4f16-b1bb-148b33de4afe"},{"location":{"line":18,"column":7},"cells":[{"location":{"line":18,"column":8},"value":"Alex"},{"location":{"line":18,"column":13},"value":"USA"},{"location":{"line":18,"column":17},"value":"New York"},{"location":{"line":18,"column":26},"value":"123456789"},{"location":{"line":18,"column":36},"value":"January"},{"location":{"line":18,"column":44},"value":"24"}],"id":"93d9f02f-b408-4856-b92c-ba7eb2ff9a7a"}],"id":"d1ab702a-b5ac-4d88-bead-cef88cad1c6b"}],"id":"8c4c94e7-a457-419e-b417-0910dc620fc5"}},{"scenario":{"location":{"line":21,"column":3},"keyword":"Scenario Outline","name":"Test Buy Function with invalid data","steps":[{"location":{"line":22,"column":5},"keyword":"Given ","text":"b-User is on cart and Clicks PlaceOrder","id":"89b61a8e-721c-467e-b044-e7a45bed068a"},{"location":{"line":23,"column":5},"keyword":"When ","text":"b-User Enters \u003cname\u003e \u003ccountry\u003e \u003ccity\u003e \u003ccreditCard\u003e \u003cmonth\u003e \u003cyear\u003e","id":"1a3aec11-9486-4880-9c25-6fc659f52508"},{"location":{"line":24,"column":5},"keyword":"And ","text":"b-User Clicks Purchase","id":"1e5aa273-fde5-4cc7-b945-83b120db109f"},{"location":{"line":25,"column":5},"keyword":"Then ","text":"b-validate unsuccessful purchase","id":"71cd41c4-7f03-437e-bf4e-6be28c60c3c3"}],"examples":[{"location":{"line":26,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":27,"column":7},"cells":[{"location":{"line":27,"column":8},"value":"name"},{"location":{"line":27,"column":13},"value":"country"},{"location":{"line":27,"column":21},"value":"city"},{"location":{"line":27,"column":26},"value":"creditCard"},{"location":{"line":27,"column":37},"value":"month"},{"location":{"line":27,"column":43},"value":"year"}],"id":"f96b526f-f450-47de-87af-e38b1066ba0d"},"tableBody":[{"location":{"line":28,"column":7},"cells":[{"location":{"line":28,"column":8},"value":"1234"},{"location":{"line":28,"column":13},"value":"India"},{"location":{"line":28,"column":19},"value":"Mumbai"},{"location":{"line":28,"column":26},"value":"123456789"},{"location":{"line":28,"column":36},"value":"April"},{"location":{"line":28,"column":42},"value":"22"}],"id":"571ad667-e6c5-4ea7-a260-25c7292a1b34"},{"location":{"line":29,"column":7},"cells":[{"location":{"line":29,"column":8},"value":"Rishab"},{"location":{"line":29,"column":15},"value":"Mumbai"},{"location":{"line":29,"column":22},"value":"Mumbai"},{"location":{"line":29,"column":29},"value":"123456789"},{"location":{"line":29,"column":39},"value":"April"},{"location":{"line":29,"column":45},"value":"22"}],"id":"2ed58778-de30-42ea-8756-773f26e574ef"},{"location":{"line":30,"column":7},"cells":[{"location":{"line":30,"column":8},"value":"Rishab"},{"location":{"line":30,"column":15},"value":"India"},{"location":{"line":30,"column":21},"value":"Maharashtra"},{"location":{"line":30,"column":33},"value":"123456789"},{"location":{"line":30,"column":43},"value":"April"},{"location":{"line":30,"column":49},"value":"22"}],"id":"964bbf8c-c33e-4503-94ee-729926d6661c"},{"location":{"line":31,"column":7},"cells":[{"location":{"line":31,"column":8},"value":"Rishab"},{"location":{"line":31,"column":15},"value":"India"},{"location":{"line":31,"column":21},"value":"Mumbai"},{"location":{"line":31,"column":28},"value":"asdf"},{"location":{"line":31,"column":33},"value":"April"},{"location":{"line":31,"column":39},"value":"22"}],"id":"2f6eb7ee-5b37-4a0d-9320-e9926e035076"},{"location":{"line":32,"column":7},"cells":[{"location":{"line":32,"column":8},"value":"Rishab"},{"location":{"line":32,"column":15},"value":"India"},{"location":{"line":32,"column":21},"value":"Mumbai"},{"location":{"line":32,"column":28},"value":"123456789"},{"location":{"line":32,"column":38},"value":"Monday"},{"location":{"line":32,"column":45},"value":"22"}],"id":"8bf45e14-a021-453f-9941-883429a18b36"},{"location":{"line":33,"column":7},"cells":[{"location":{"line":33,"column":8},"value":"Rishab"},{"location":{"line":33,"column":15},"value":"India"},{"location":{"line":33,"column":21},"value":"Mumbai"},{"location":{"line":33,"column":28},"value":"123456789"},{"location":{"line":33,"column":38},"value":"April"},{"location":{"line":33,"column":44},"value":"-122"}],"id":"2343630c-f5aa-48a3-a616-d71b13c4a503"}],"id":"b1ed75f8-8f3a-48ef-9859-64338317a676"}],"id":"c1948670-049b-49c6-a63f-3b8f5222a76d"}}]}}},{"pickle":{"id":"909d0b43-8ec8-476f-a6b1-bde44db97363","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy PopUp Window","language":"en","steps":[{"text":"b-User is into cart","id":"6d0da743-1b14-42ad-aaaa-11bb75388997","astNodeIds":["bae8d453-7d13-4f33-b8cb-46684ed5ec76"]},{"text":"b-User clicks PlaceOrder","id":"87051ef0-79ab-434c-8996-90ebc1485e01","astNodeIds":["d213b8da-436a-4376-b22d-45d66a62514f"]},{"text":"b-User Gets Popup For Details","id":"d8b34bf4-f09c-4d4f-95eb-17b4132a04f2","astNodeIds":["5ac1eeed-8371-4f56-9c48-e8c8cd5c597f"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["a2d09eac-5813-412a-99c2-8147dae7faa5"]}},{"pickle":{"id":"dcabb4bd-44d3-40d5-9e86-654e7ae7327b","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test online Payment Function","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"d1633e7a-13f1-488f-b182-c5d892c8ee92","astNodeIds":["c95112b7-3cbb-4c3c-8f25-16b26210a2a4","7123daa2-5a5e-4f16-b1bb-148b33de4afe"]},{"text":"b-User Enters Rishab India Mumbai 123456789 April 22","id":"9e9b884d-5854-4408-a5a0-cd00d72e19a7","astNodeIds":["f2bd8d98-8236-4849-ae37-a21ee0e7d374","7123daa2-5a5e-4f16-b1bb-148b33de4afe"]},{"text":"b-User Clicks Purchase","id":"d63d0e8f-e5f7-491f-a068-9f165cb4a230","astNodeIds":["46b6345a-82d3-4bab-aeaf-1172e38a81b8","7123daa2-5a5e-4f16-b1bb-148b33de4afe"]},{"text":"b-Validate successful purchase","id":"50df26da-b1ce-4329-afa6-d540bd3da49d","astNodeIds":["36302717-7b0b-40e5-82e0-d1c5d34ffb1b","7123daa2-5a5e-4f16-b1bb-148b33de4afe"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["8c4c94e7-a457-419e-b417-0910dc620fc5","7123daa2-5a5e-4f16-b1bb-148b33de4afe"]}},{"pickle":{"id":"5f6e3d11-4cb3-4bbe-a95f-38a4a54764e5","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test online Payment Function","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"0aa2770c-2929-4358-a46b-cf1569815657","astNodeIds":["c95112b7-3cbb-4c3c-8f25-16b26210a2a4","93d9f02f-b408-4856-b92c-ba7eb2ff9a7a"]},{"text":"b-User Enters Alex USA New York 123456789 January 24","id":"91f82c4a-8159-4024-84bc-f3871c974160","astNodeIds":["f2bd8d98-8236-4849-ae37-a21ee0e7d374","93d9f02f-b408-4856-b92c-ba7eb2ff9a7a"]},{"text":"b-User Clicks Purchase","id":"9389a458-43a2-411f-83c6-09671c69e018","astNodeIds":["46b6345a-82d3-4bab-aeaf-1172e38a81b8","93d9f02f-b408-4856-b92c-ba7eb2ff9a7a"]},{"text":"b-Validate successful purchase","id":"de3f1cf3-1b9b-4f15-92c0-99079f7e6416","astNodeIds":["36302717-7b0b-40e5-82e0-d1c5d34ffb1b","93d9f02f-b408-4856-b92c-ba7eb2ff9a7a"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["8c4c94e7-a457-419e-b417-0910dc620fc5","93d9f02f-b408-4856-b92c-ba7eb2ff9a7a"]}},{"pickle":{"id":"b39edf2b-aeb0-49f6-96e1-42458c3073a1","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy Function with invalid data","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"387dd42e-b015-456a-bfb7-a1b6fddcbe83","astNodeIds":["89b61a8e-721c-467e-b044-e7a45bed068a","571ad667-e6c5-4ea7-a260-25c7292a1b34"]},{"text":"b-User Enters 1234 India Mumbai 123456789 April 22","id":"92cc83b4-5a7b-40c0-9c50-56ffeca8997b","astNodeIds":["1a3aec11-9486-4880-9c25-6fc659f52508","571ad667-e6c5-4ea7-a260-25c7292a1b34"]},{"text":"b-User Clicks Purchase","id":"52ca7a89-78bb-40cd-9e83-02e844cddafe","astNodeIds":["1e5aa273-fde5-4cc7-b945-83b120db109f","571ad667-e6c5-4ea7-a260-25c7292a1b34"]},{"text":"b-validate unsuccessful purchase","id":"7584c0b1-c43f-4a76-bf7a-163264c30b2d","astNodeIds":["71cd41c4-7f03-437e-bf4e-6be28c60c3c3","571ad667-e6c5-4ea7-a260-25c7292a1b34"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["c1948670-049b-49c6-a63f-3b8f5222a76d","571ad667-e6c5-4ea7-a260-25c7292a1b34"]}},{"pickle":{"id":"d2a15350-3e23-4d1c-b44e-2d9d49fab0b2","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy Function with invalid data","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"d550cf98-ded0-4e79-ba2b-062d7021d7e3","astNodeIds":["89b61a8e-721c-467e-b044-e7a45bed068a","2ed58778-de30-42ea-8756-773f26e574ef"]},{"text":"b-User Enters Rishab Mumbai Mumbai 123456789 April 22","id":"69ee823e-e1cb-41a5-8c0d-9d9b3d61fd43","astNodeIds":["1a3aec11-9486-4880-9c25-6fc659f52508","2ed58778-de30-42ea-8756-773f26e574ef"]},{"text":"b-User Clicks Purchase","id":"abdbf7de-5247-4373-adcf-d8d7a8e89470","astNodeIds":["1e5aa273-fde5-4cc7-b945-83b120db109f","2ed58778-de30-42ea-8756-773f26e574ef"]},{"text":"b-validate unsuccessful purchase","id":"002aaecf-f2c3-4816-90b2-c90c35000978","astNodeIds":["71cd41c4-7f03-437e-bf4e-6be28c60c3c3","2ed58778-de30-42ea-8756-773f26e574ef"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["c1948670-049b-49c6-a63f-3b8f5222a76d","2ed58778-de30-42ea-8756-773f26e574ef"]}},{"pickle":{"id":"004c1a54-c0ca-4bfa-a7d7-519c1fd05dd8","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy Function with invalid data","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"06851524-3e0f-4838-9e01-fd46ca1718b0","astNodeIds":["89b61a8e-721c-467e-b044-e7a45bed068a","964bbf8c-c33e-4503-94ee-729926d6661c"]},{"text":"b-User Enters Rishab India Maharashtra 123456789 April 22","id":"1c8efc8b-c153-4881-89ef-192c27604770","astNodeIds":["1a3aec11-9486-4880-9c25-6fc659f52508","964bbf8c-c33e-4503-94ee-729926d6661c"]},{"text":"b-User Clicks Purchase","id":"89c40945-57ca-4d77-8f03-050a61a867eb","astNodeIds":["1e5aa273-fde5-4cc7-b945-83b120db109f","964bbf8c-c33e-4503-94ee-729926d6661c"]},{"text":"b-validate unsuccessful purchase","id":"917a950f-d86a-4775-ba17-48d69002e753","astNodeIds":["71cd41c4-7f03-437e-bf4e-6be28c60c3c3","964bbf8c-c33e-4503-94ee-729926d6661c"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["c1948670-049b-49c6-a63f-3b8f5222a76d","964bbf8c-c33e-4503-94ee-729926d6661c"]}},{"pickle":{"id":"637cbd44-e925-44b5-9826-7f88266ef2ed","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy Function with invalid data","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"b4537973-2afd-4b8f-bb3d-438b8956145e","astNodeIds":["89b61a8e-721c-467e-b044-e7a45bed068a","2f6eb7ee-5b37-4a0d-9320-e9926e035076"]},{"text":"b-User Enters Rishab India Mumbai asdf April 22","id":"8be9f50e-1300-4d48-9990-20036af2d2b8","astNodeIds":["1a3aec11-9486-4880-9c25-6fc659f52508","2f6eb7ee-5b37-4a0d-9320-e9926e035076"]},{"text":"b-User Clicks Purchase","id":"42729b98-409a-4312-ac08-1219d392c0a1","astNodeIds":["1e5aa273-fde5-4cc7-b945-83b120db109f","2f6eb7ee-5b37-4a0d-9320-e9926e035076"]},{"text":"b-validate unsuccessful purchase","id":"dc2a9e24-0b14-40f1-bfef-d14746d72f12","astNodeIds":["71cd41c4-7f03-437e-bf4e-6be28c60c3c3","2f6eb7ee-5b37-4a0d-9320-e9926e035076"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["c1948670-049b-49c6-a63f-3b8f5222a76d","2f6eb7ee-5b37-4a0d-9320-e9926e035076"]}},{"pickle":{"id":"71d3a272-b65e-4d1a-8e5d-aca3a7462935","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy Function with invalid data","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"2e27761d-4e12-4d8f-92f7-eee5b17890e8","astNodeIds":["89b61a8e-721c-467e-b044-e7a45bed068a","8bf45e14-a021-453f-9941-883429a18b36"]},{"text":"b-User Enters Rishab India Mumbai 123456789 Monday 22","id":"29cd2642-80a7-4962-8b66-bbc268ed07e0","astNodeIds":["1a3aec11-9486-4880-9c25-6fc659f52508","8bf45e14-a021-453f-9941-883429a18b36"]},{"text":"b-User Clicks Purchase","id":"cddc00cd-aaae-4fff-9cf7-ad0ba1fddb58","astNodeIds":["1e5aa273-fde5-4cc7-b945-83b120db109f","8bf45e14-a021-453f-9941-883429a18b36"]},{"text":"b-validate unsuccessful purchase","id":"05280e1f-7bca-4e32-9815-e86976a25f1c","astNodeIds":["71cd41c4-7f03-437e-bf4e-6be28c60c3c3","8bf45e14-a021-453f-9941-883429a18b36"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["c1948670-049b-49c6-a63f-3b8f5222a76d","8bf45e14-a021-453f-9941-883429a18b36"]}},{"pickle":{"id":"622d853a-aba0-418a-9292-6f363c9ec030","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Buy.feature","name":"Test Buy Function with invalid data","language":"en","steps":[{"text":"b-User is on cart and Clicks PlaceOrder","id":"5cb5d854-0486-4fc7-8733-bd557bb33c45","astNodeIds":["89b61a8e-721c-467e-b044-e7a45bed068a","2343630c-f5aa-48a3-a616-d71b13c4a503"]},{"text":"b-User Enters Rishab India Mumbai 123456789 April -122","id":"a4758804-0618-47cc-9070-f3aa36355440","astNodeIds":["1a3aec11-9486-4880-9c25-6fc659f52508","2343630c-f5aa-48a3-a616-d71b13c4a503"]},{"text":"b-User Clicks Purchase","id":"622fb860-f6ee-4dc0-b8c8-8d1ef1209407","astNodeIds":["1e5aa273-fde5-4cc7-b945-83b120db109f","2343630c-f5aa-48a3-a616-d71b13c4a503"]},{"text":"b-validate unsuccessful purchase","id":"90d5c512-1b64-4209-bd30-535660713047","astNodeIds":["71cd41c4-7f03-437e-bf4e-6be28c60c3c3","2343630c-f5aa-48a3-a616-d71b13c4a503"]}],"tags":[{"name":"@buy","astNodeId":"bbe01fd1-cad1-4f06-8d56-6bcc23983034"}],"astNodeIds":["c1948670-049b-49c6-a63f-3b8f5222a76d","2343630c-f5aa-48a3-a616-d71b13c4a503"]}},{"source":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","data":"@login\r\nFeature: DemoBlaze Login Functionality\r\n\r\n  Scenario: To validate the successfully Navigation to Demo_blaze Login page\r\n    Given l-User enters DemoBlaze url\r\n    Then l-User should be able to navigate to url successfully\r\n\r\n  Scenario Outline: Test Login Functionality\r\n    Given l-User is on Login Page\r\n    When l-User enters \u003cusername\u003e and \u003cpassword\u003e\r\n    And l-User clicks on Login Button\r\n    Then l-User should be able to Login successfully \u003cusername\u003e\r\n    Examples:\r\n      |username|password|\r\n      |test|test|\r\n      |admin|admin|\r\n\r\n  Scenario Outline: Test Login Functionality with invalid data.\r\n    Given l-User is on Login Page\r\n    When l-User enters \u003cusername\u003e and \u003cpassword\u003e\r\n    And l-User clicks on Login Button\r\n    Then l-User should be not able to Login successfully\r\n    Examples:\r\n      |username|password|\r\n      |test|test12|\r\n      |admin|admin12|","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@login","id":"72eb72be-df81-4521-aabe-557d61938713"}],"language":"en","keyword":"Feature","name":"DemoBlaze Login Functionality","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario","name":"To validate the successfully Navigation to Demo_blaze Login page","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"l-User enters DemoBlaze url","id":"964eb147-3d23-46cf-93e4-933cbbcfda6c"},{"location":{"line":6,"column":5},"keyword":"Then ","text":"l-User should be able to navigate to url successfully","id":"72f2153c-9d96-4b74-888d-d42e21959ff8"}],"id":"8943aa0e-7a2d-4600-b1f7-eab6c8f67934"}},{"scenario":{"location":{"line":8,"column":3},"keyword":"Scenario Outline","name":"Test Login Functionality","steps":[{"location":{"line":9,"column":5},"keyword":"Given ","text":"l-User is on Login Page","id":"cd3e62ba-a9a3-468f-be27-cc11d22f4073"},{"location":{"line":10,"column":5},"keyword":"When ","text":"l-User enters \u003cusername\u003e and \u003cpassword\u003e","id":"3e808121-a8c3-4d17-a327-d898273a133c"},{"location":{"line":11,"column":5},"keyword":"And ","text":"l-User clicks on Login Button","id":"b1f6a08b-963a-4384-98dd-327a1505357f"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"l-User should be able to Login successfully \u003cusername\u003e","id":"173ea23b-e755-4a85-906a-416f15c59aef"}],"examples":[{"location":{"line":13,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":8},"value":"username"},{"location":{"line":14,"column":17},"value":"password"}],"id":"97fe913e-cbc1-4264-988f-f6378b7cbc64"},"tableBody":[{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":8},"value":"test"},{"location":{"line":15,"column":13},"value":"test"}],"id":"e52a251e-88bd-485d-9aa9-22990e6c312a"},{"location":{"line":16,"column":7},"cells":[{"location":{"line":16,"column":8},"value":"admin"},{"location":{"line":16,"column":14},"value":"admin"}],"id":"986b4c38-063f-4ce4-8832-417d9d135f72"}],"id":"8c904273-7532-4421-bf6f-6b3f243557f6"}],"id":"5643d35c-e178-433b-b2d3-8070e467e174"}},{"scenario":{"location":{"line":18,"column":3},"keyword":"Scenario Outline","name":"Test Login Functionality with invalid data.","steps":[{"location":{"line":19,"column":5},"keyword":"Given ","text":"l-User is on Login Page","id":"5875aec4-9150-4617-a080-34c1dd528e36"},{"location":{"line":20,"column":5},"keyword":"When ","text":"l-User enters \u003cusername\u003e and \u003cpassword\u003e","id":"fea80e24-91eb-44f0-b741-bbb8f528f3d3"},{"location":{"line":21,"column":5},"keyword":"And ","text":"l-User clicks on Login Button","id":"41a7247d-ed1b-4ce2-ad26-013cfd40391e"},{"location":{"line":22,"column":5},"keyword":"Then ","text":"l-User should be not able to Login successfully","id":"30c76e0e-ccb6-412e-b03f-df2454beea69"}],"examples":[{"location":{"line":23,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":24,"column":7},"cells":[{"location":{"line":24,"column":8},"value":"username"},{"location":{"line":24,"column":17},"value":"password"}],"id":"b5816f99-2851-426c-9c8a-2c9179b3bc7c"},"tableBody":[{"location":{"line":25,"column":7},"cells":[{"location":{"line":25,"column":8},"value":"test"},{"location":{"line":25,"column":13},"value":"test12"}],"id":"7a989502-39c0-49a1-8a58-8483cbd41f1a"},{"location":{"line":26,"column":7},"cells":[{"location":{"line":26,"column":8},"value":"admin"},{"location":{"line":26,"column":14},"value":"admin12"}],"id":"907e39db-42e1-4ebe-b575-c8873ceec77c"}],"id":"db41beac-d190-496f-b366-7ebcf0998b38"}],"id":"fc44e378-9dcb-4ef1-ae1b-71032dff4864"}}]}}},{"pickle":{"id":"905a566d-0601-481a-be85-ca842f33a066","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","name":"To validate the successfully Navigation to Demo_blaze Login page","language":"en","steps":[{"text":"l-User enters DemoBlaze url","id":"b35f11e7-c4db-4e6b-9d5d-cb289982adb2","astNodeIds":["964eb147-3d23-46cf-93e4-933cbbcfda6c"]},{"text":"l-User should be able to navigate to url successfully","id":"f67e49c4-c782-49d9-9b10-b5ac619d2bd1","astNodeIds":["72f2153c-9d96-4b74-888d-d42e21959ff8"]}],"tags":[{"name":"@login","astNodeId":"72eb72be-df81-4521-aabe-557d61938713"}],"astNodeIds":["8943aa0e-7a2d-4600-b1f7-eab6c8f67934"]}},{"pickle":{"id":"a5f07593-b76e-4ffd-861e-30077ae7646b","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","name":"Test Login Functionality","language":"en","steps":[{"text":"l-User is on Login Page","id":"43c3b681-19c8-4e90-8c1d-c3d8edc5efd1","astNodeIds":["cd3e62ba-a9a3-468f-be27-cc11d22f4073","e52a251e-88bd-485d-9aa9-22990e6c312a"]},{"text":"l-User enters test and test","id":"1a58f103-1652-4d5a-a50a-1fb4475dcaee","astNodeIds":["3e808121-a8c3-4d17-a327-d898273a133c","e52a251e-88bd-485d-9aa9-22990e6c312a"]},{"text":"l-User clicks on Login Button","id":"0508135a-2f38-429b-9916-14a99ef16f0a","astNodeIds":["b1f6a08b-963a-4384-98dd-327a1505357f","e52a251e-88bd-485d-9aa9-22990e6c312a"]},{"text":"l-User should be able to Login successfully test","id":"e390d189-c07c-49e6-befe-ea9b97ea025e","astNodeIds":["173ea23b-e755-4a85-906a-416f15c59aef","e52a251e-88bd-485d-9aa9-22990e6c312a"]}],"tags":[{"name":"@login","astNodeId":"72eb72be-df81-4521-aabe-557d61938713"}],"astNodeIds":["5643d35c-e178-433b-b2d3-8070e467e174","e52a251e-88bd-485d-9aa9-22990e6c312a"]}},{"pickle":{"id":"cdb94cfc-ecc0-43df-877d-b9d06ca975db","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","name":"Test Login Functionality","language":"en","steps":[{"text":"l-User is on Login Page","id":"c91ea6fb-2f38-4619-ba8b-1bd15a659b5d","astNodeIds":["cd3e62ba-a9a3-468f-be27-cc11d22f4073","986b4c38-063f-4ce4-8832-417d9d135f72"]},{"text":"l-User enters admin and admin","id":"8f259693-8746-466a-bd3f-b1c8d472dac7","astNodeIds":["3e808121-a8c3-4d17-a327-d898273a133c","986b4c38-063f-4ce4-8832-417d9d135f72"]},{"text":"l-User clicks on Login Button","id":"9ff43e48-9255-4760-a567-0b6247492d6b","astNodeIds":["b1f6a08b-963a-4384-98dd-327a1505357f","986b4c38-063f-4ce4-8832-417d9d135f72"]},{"text":"l-User should be able to Login successfully admin","id":"969ca7b0-83d6-4d3b-84fd-723c949674c4","astNodeIds":["173ea23b-e755-4a85-906a-416f15c59aef","986b4c38-063f-4ce4-8832-417d9d135f72"]}],"tags":[{"name":"@login","astNodeId":"72eb72be-df81-4521-aabe-557d61938713"}],"astNodeIds":["5643d35c-e178-433b-b2d3-8070e467e174","986b4c38-063f-4ce4-8832-417d9d135f72"]}},{"pickle":{"id":"af463844-7592-4978-81a0-44cdbb4c5a22","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","name":"Test Login Functionality with invalid data.","language":"en","steps":[{"text":"l-User is on Login Page","id":"d88eb7fd-79a1-4dd2-8c21-aa914615c661","astNodeIds":["5875aec4-9150-4617-a080-34c1dd528e36","7a989502-39c0-49a1-8a58-8483cbd41f1a"]},{"text":"l-User enters test and test12","id":"0bbae04d-317a-4d54-8bfc-6cd528f43f21","astNodeIds":["fea80e24-91eb-44f0-b741-bbb8f528f3d3","7a989502-39c0-49a1-8a58-8483cbd41f1a"]},{"text":"l-User clicks on Login Button","id":"bab53081-03ac-4949-9b28-fcda658d0c05","astNodeIds":["41a7247d-ed1b-4ce2-ad26-013cfd40391e","7a989502-39c0-49a1-8a58-8483cbd41f1a"]},{"text":"l-User should be not able to Login successfully","id":"4c5e38d8-b1e7-41f1-a4a1-1437f830dddc","astNodeIds":["30c76e0e-ccb6-412e-b03f-df2454beea69","7a989502-39c0-49a1-8a58-8483cbd41f1a"]}],"tags":[{"name":"@login","astNodeId":"72eb72be-df81-4521-aabe-557d61938713"}],"astNodeIds":["fc44e378-9dcb-4ef1-ae1b-71032dff4864","7a989502-39c0-49a1-8a58-8483cbd41f1a"]}},{"pickle":{"id":"771db79d-1ba9-4f51-ab87-a7cd7adbe651","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Login.feature","name":"Test Login Functionality with invalid data.","language":"en","steps":[{"text":"l-User is on Login Page","id":"0827065a-b239-4dc6-ba7c-533e7174df56","astNodeIds":["5875aec4-9150-4617-a080-34c1dd528e36","907e39db-42e1-4ebe-b575-c8873ceec77c"]},{"text":"l-User enters admin and admin12","id":"eb854ac6-83cd-422e-84a6-469d3b68bb36","astNodeIds":["fea80e24-91eb-44f0-b741-bbb8f528f3d3","907e39db-42e1-4ebe-b575-c8873ceec77c"]},{"text":"l-User clicks on Login Button","id":"c5ebfbeb-2d6c-4b12-a5a7-4ca45ad108e4","astNodeIds":["41a7247d-ed1b-4ce2-ad26-013cfd40391e","907e39db-42e1-4ebe-b575-c8873ceec77c"]},{"text":"l-User should be not able to Login successfully","id":"b627f393-e0ef-4740-afb6-7fc66019ada6","astNodeIds":["30c76e0e-ccb6-412e-b03f-df2454beea69","907e39db-42e1-4ebe-b575-c8873ceec77c"]}],"tags":[{"name":"@login","astNodeId":"72eb72be-df81-4521-aabe-557d61938713"}],"astNodeIds":["fc44e378-9dcb-4ef1-ae1b-71032dff4864","907e39db-42e1-4ebe-b575-c8873ceec77c"]}},{"source":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Registration.feature","data":"@register\r\nFeature: DemoBlaze Registration Functionality\r\n\r\n  Scenario: To validate the sucessful Navigation to Demo_blaze Signup page\r\n    Given r-User enters DemoBlaze url\r\n    Then r-User should be able to navigate to url successfully\r\n\r\n  Scenario Outline: Test Registration Functionality\r\n    Given r-User is on Registration Page\r\n    When r-User enters \u003cusername\u003e and \u003cpassword\u003e\r\n    And r-User clicks on Signup Button\r\n    Then r-User should be able to Register successfully\r\n    Examples:\r\n      |username|password|\r\n      |test|test123|\r\n      |abc|abc123|\r\n\r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Registration.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@register","id":"216cbf98-7ed8-487a-95aa-648c3fd9ee95"}],"language":"en","keyword":"Feature","name":"DemoBlaze Registration Functionality","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario","name":"To validate the sucessful Navigation to Demo_blaze Signup page","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"r-User enters DemoBlaze url","id":"73f1035c-b44a-4769-9915-9e0ee3c6f731"},{"location":{"line":6,"column":5},"keyword":"Then ","text":"r-User should be able to navigate to url successfully","id":"77a1450c-57cf-4287-8965-6785f47c22b3"}],"id":"dbaf17c9-8e9a-4024-a243-16ddf75021e8"}},{"scenario":{"location":{"line":8,"column":3},"keyword":"Scenario Outline","name":"Test Registration Functionality","steps":[{"location":{"line":9,"column":5},"keyword":"Given ","text":"r-User is on Registration Page","id":"fa639867-2364-4adc-8412-5f8570fca731"},{"location":{"line":10,"column":5},"keyword":"When ","text":"r-User enters \u003cusername\u003e and \u003cpassword\u003e","id":"99d91e37-290d-453e-bfe5-04894a79480d"},{"location":{"line":11,"column":5},"keyword":"And ","text":"r-User clicks on Signup Button","id":"a874046e-9449-4231-bd80-69d798cfeb55"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"r-User should be able to Register successfully","id":"28c911ce-aa24-40d6-9214-7fed857b390f"}],"examples":[{"location":{"line":13,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":8},"value":"username"},{"location":{"line":14,"column":17},"value":"password"}],"id":"15252189-525e-4659-8af8-3d0303a06740"},"tableBody":[{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":8},"value":"test"},{"location":{"line":15,"column":13},"value":"test123"}],"id":"b9a3f0f3-01ae-43ac-97b4-f246e12bf072"},{"location":{"line":16,"column":7},"cells":[{"location":{"line":16,"column":8},"value":"abc"},{"location":{"line":16,"column":12},"value":"abc123"}],"id":"6377f72d-12ed-498f-87d6-74896956df72"}],"id":"a9767fdd-c788-42ed-8795-89a8b0c28645"}],"id":"5ebf5db1-ed54-4c4e-94fe-81b083ce9546"}}]}}},{"pickle":{"id":"b5c5597c-84d4-4eae-bb43-03993b4312f5","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Registration.feature","name":"To validate the sucessful Navigation to Demo_blaze Signup page","language":"en","steps":[{"text":"r-User enters DemoBlaze url","id":"fe2d7c3a-f543-47b0-af03-fb05116812ce","astNodeIds":["73f1035c-b44a-4769-9915-9e0ee3c6f731"]},{"text":"r-User should be able to navigate to url successfully","id":"1264dd9e-d056-4466-8fb4-08eb19953df5","astNodeIds":["77a1450c-57cf-4287-8965-6785f47c22b3"]}],"tags":[{"name":"@register","astNodeId":"216cbf98-7ed8-487a-95aa-648c3fd9ee95"}],"astNodeIds":["dbaf17c9-8e9a-4024-a243-16ddf75021e8"]}},{"pickle":{"id":"11bce125-39b2-4c76-9812-d489c00b76e6","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Registration.feature","name":"Test Registration Functionality","language":"en","steps":[{"text":"r-User is on Registration Page","id":"a772123f-a5e6-4dfc-b58b-fe2171aae0e0","astNodeIds":["fa639867-2364-4adc-8412-5f8570fca731","b9a3f0f3-01ae-43ac-97b4-f246e12bf072"]},{"text":"r-User enters test and test123","id":"0aa76926-4ccc-4d67-87ef-a35e99daf992","astNodeIds":["99d91e37-290d-453e-bfe5-04894a79480d","b9a3f0f3-01ae-43ac-97b4-f246e12bf072"]},{"text":"r-User clicks on Signup Button","id":"97a7b667-f665-4449-8f11-041378862b74","astNodeIds":["a874046e-9449-4231-bd80-69d798cfeb55","b9a3f0f3-01ae-43ac-97b4-f246e12bf072"]},{"text":"r-User should be able to Register successfully","id":"0a733b9b-cc3e-473e-a6a8-f8f75d5c3135","astNodeIds":["28c911ce-aa24-40d6-9214-7fed857b390f","b9a3f0f3-01ae-43ac-97b4-f246e12bf072"]}],"tags":[{"name":"@register","astNodeId":"216cbf98-7ed8-487a-95aa-648c3fd9ee95"}],"astNodeIds":["5ebf5db1-ed54-4c4e-94fe-81b083ce9546","b9a3f0f3-01ae-43ac-97b4-f246e12bf072"]}},{"pickle":{"id":"ab6e77f2-e8c4-4c07-b16f-7a3a5ae32dea","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Registration.feature","name":"Test Registration Functionality","language":"en","steps":[{"text":"r-User is on Registration Page","id":"05a86f76-f6d4-480f-a6de-e7ab4b5bf645","astNodeIds":["fa639867-2364-4adc-8412-5f8570fca731","6377f72d-12ed-498f-87d6-74896956df72"]},{"text":"r-User enters abc and abc123","id":"020c2323-5a90-4133-8762-659a89d09f77","astNodeIds":["99d91e37-290d-453e-bfe5-04894a79480d","6377f72d-12ed-498f-87d6-74896956df72"]},{"text":"r-User clicks on Signup Button","id":"0ee27bff-365e-4ae9-876c-db25ee17db61","astNodeIds":["a874046e-9449-4231-bd80-69d798cfeb55","6377f72d-12ed-498f-87d6-74896956df72"]},{"text":"r-User should be able to Register successfully","id":"f0a4556e-ee29-4f1c-a07e-8d852f3796b6","astNodeIds":["28c911ce-aa24-40d6-9214-7fed857b390f","6377f72d-12ed-498f-87d6-74896956df72"]}],"tags":[{"name":"@register","astNodeId":"216cbf98-7ed8-487a-95aa-648c3fd9ee95"}],"astNodeIds":["5ebf5db1-ed54-4c4e-94fe-81b083ce9546","6377f72d-12ed-498f-87d6-74896956df72"]}},{"source":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Search.feature","data":"@search\r\nFeature: DemoBlaze Search Functionality\r\n\r\n  Scenario: To validate that user can filter products by PHONE category\r\n    Given  User is on homepage\r\n    When User clicks on Phone category\r\n    Then  User should be able to successfully filter products by PHONE category.\r\n\r\n  Scenario: To validate that user can filter products by LAPTOP category\r\n    Given  User is on homepage\r\n    When User clicks on LAPTOP category\r\n    Then  User should be able to successfully filter products by LAPTOP category.\r\n\r\n\r\n  Scenario: To validate that user can filter products by MONITORS category\r\n    Given  User is on homepage\r\n    When User clicks on MONITOR category\r\n    Then  User should be able to successfully filter products by MONITORS category.\r\n\r\n  Scenario: To validate that add to cart button is functional.\r\n    Given  User is on homepage\r\n    When User clicks on a product\r\n    And User clicks on add to cart button\r\n    And  User clicks on cart button\r\n    Then  User should be able to successfully see the product in their cart.\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Search.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@search","id":"c0b51cd6-a93f-43f4-bfc6-21f1b4b80f30"}],"language":"en","keyword":"Feature","name":"DemoBlaze Search Functionality","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario","name":"To validate that user can filter products by PHONE category","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"User is on homepage","id":"7a7979f8-42ed-4e65-9907-5a3a4cd7b367"},{"location":{"line":6,"column":5},"keyword":"When ","text":"User clicks on Phone category","id":"cf12d793-6e01-42e5-be75-1a3619f04b7b"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"User should be able to successfully filter products by PHONE category.","id":"0fff6208-9fbf-4117-b3d7-dc7515ebc692"}],"id":"9178bce7-d1df-4151-9e27-f454d4e074e2"}},{"scenario":{"location":{"line":9,"column":3},"keyword":"Scenario","name":"To validate that user can filter products by LAPTOP category","steps":[{"location":{"line":10,"column":5},"keyword":"Given ","text":"User is on homepage","id":"d7f077a6-fe0a-4055-9dd2-2ae46a85c2c2"},{"location":{"line":11,"column":5},"keyword":"When ","text":"User clicks on LAPTOP category","id":"e068bcd5-4276-4750-9ee4-a38572b2ba57"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"User should be able to successfully filter products by LAPTOP category.","id":"5926ef22-0b1c-40ba-afc3-88d1178f6520"}],"id":"3c82728f-8222-40ee-aa24-1ea16315b14a"}},{"scenario":{"location":{"line":15,"column":3},"keyword":"Scenario","name":"To validate that user can filter products by MONITORS category","steps":[{"location":{"line":16,"column":5},"keyword":"Given ","text":"User is on homepage","id":"7e8f4f14-1907-45ea-a8ec-5d1cb869122a"},{"location":{"line":17,"column":5},"keyword":"When ","text":"User clicks on MONITOR category","id":"65a7cbfa-3826-4a5a-856b-3818afa954ac"},{"location":{"line":18,"column":5},"keyword":"Then ","text":"User should be able to successfully filter products by MONITORS category.","id":"43b6b345-5c67-45e1-952f-751d791fa777"}],"id":"f54921cb-beca-497e-acef-1284110bd02e"}},{"scenario":{"location":{"line":20,"column":3},"keyword":"Scenario","name":"To validate that add to cart button is functional.","steps":[{"location":{"line":21,"column":5},"keyword":"Given ","text":"User is on homepage","id":"097ca049-5807-45f3-9968-fa761d917926"},{"location":{"line":22,"column":5},"keyword":"When ","text":"User clicks on a product","id":"1285ed4e-b00d-43fd-a4aa-4b6261088db0"},{"location":{"line":23,"column":5},"keyword":"And ","text":"User clicks on add to cart button","id":"8292f6ac-f13a-45c3-9579-235041fe5a03"},{"location":{"line":24,"column":5},"keyword":"And ","text":"User clicks on cart button","id":"2bdeeddb-c3c9-4a7b-af90-31104b555575"},{"location":{"line":25,"column":5},"keyword":"Then ","text":"User should be able to successfully see the product in their cart.","id":"8bfa7be1-aa05-47ff-840d-ee77fbec7598"}],"id":"fa6829b9-2a08-47d7-8601-33aca6f11f59"}}]}}},{"pickle":{"id":"07e5520f-a72f-4992-8eee-0f2c10c3ac27","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Search.feature","name":"To validate that user can filter products by PHONE category","language":"en","steps":[{"text":"User is on homepage","id":"59106ee2-e251-4323-b95c-15be9b1a4220","astNodeIds":["7a7979f8-42ed-4e65-9907-5a3a4cd7b367"]},{"text":"User clicks on Phone category","id":"ee369997-6bd2-42ac-a2d0-1cd4cbce5802","astNodeIds":["cf12d793-6e01-42e5-be75-1a3619f04b7b"]},{"text":"User should be able to successfully filter products by PHONE category.","id":"f1a9df49-7961-4b70-9b2c-4df6f88766ed","astNodeIds":["0fff6208-9fbf-4117-b3d7-dc7515ebc692"]}],"tags":[{"name":"@search","astNodeId":"c0b51cd6-a93f-43f4-bfc6-21f1b4b80f30"}],"astNodeIds":["9178bce7-d1df-4151-9e27-f454d4e074e2"]}},{"pickle":{"id":"5d1691f2-0b44-4b50-8e95-f048f96c9166","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Search.feature","name":"To validate that user can filter products by LAPTOP category","language":"en","steps":[{"text":"User is on homepage","id":"6434d388-0b6a-4435-9295-cd81bfe88273","astNodeIds":["d7f077a6-fe0a-4055-9dd2-2ae46a85c2c2"]},{"text":"User clicks on LAPTOP category","id":"9a692f0b-5db8-418a-adb4-67fdea21a6c9","astNodeIds":["e068bcd5-4276-4750-9ee4-a38572b2ba57"]},{"text":"User should be able to successfully filter products by LAPTOP category.","id":"32799373-a4d8-49d8-9099-e881059146c5","astNodeIds":["5926ef22-0b1c-40ba-afc3-88d1178f6520"]}],"tags":[{"name":"@search","astNodeId":"c0b51cd6-a93f-43f4-bfc6-21f1b4b80f30"}],"astNodeIds":["3c82728f-8222-40ee-aa24-1ea16315b14a"]}},{"pickle":{"id":"911f336f-6bfc-4bfa-bf32-e6fe8bb1cd08","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Search.feature","name":"To validate that user can filter products by MONITORS category","language":"en","steps":[{"text":"User is on homepage","id":"94dcd2cc-0489-46d3-8c87-1e29e75fafa6","astNodeIds":["7e8f4f14-1907-45ea-a8ec-5d1cb869122a"]},{"text":"User clicks on MONITOR category","id":"013b1494-cad6-494f-a23f-d290a39af27f","astNodeIds":["65a7cbfa-3826-4a5a-856b-3818afa954ac"]},{"text":"User should be able to successfully filter products by MONITORS category.","id":"75284a6c-7deb-4001-b152-47bfd2b2e6c1","astNodeIds":["43b6b345-5c67-45e1-952f-751d791fa777"]}],"tags":[{"name":"@search","astNodeId":"c0b51cd6-a93f-43f4-bfc6-21f1b4b80f30"}],"astNodeIds":["f54921cb-beca-497e-acef-1284110bd02e"]}},{"pickle":{"id":"74c52b7c-daca-42fd-950b-d05129a032e4","uri":"file:///C:/Users/admin/IdeaProjects/DemoBlaze/src/test/java/Feature/Search.feature","name":"To validate that add to cart button is functional.","language":"en","steps":[{"text":"User is on homepage","id":"fd97d69e-e0cf-4cc8-9376-aa45fc498774","astNodeIds":["097ca049-5807-45f3-9968-fa761d917926"]},{"text":"User clicks on a product","id":"ed13e506-b0fc-4768-9554-5c8077a8308f","astNodeIds":["1285ed4e-b00d-43fd-a4aa-4b6261088db0"]},{"text":"User clicks on add to cart button","id":"ef4d3174-c6d6-4a3f-b93a-0daeeb38d2b9","astNodeIds":["8292f6ac-f13a-45c3-9579-235041fe5a03"]},{"text":"User clicks on cart button","id":"d5ff1e8b-8ee9-4850-ab1f-e1cdca9b1fe4","astNodeIds":["2bdeeddb-c3c9-4a7b-af90-31104b555575"]},{"text":"User should be able to successfully see the product in their cart.","id":"0d4c70f8-b895-4c62-8e7a-6236bd97e72d","astNodeIds":["8bfa7be1-aa05-47ff-840d-ee77fbec7598"]}],"tags":[{"name":"@search","astNodeId":"c0b51cd6-a93f-43f4-bfc6-21f1b4b80f30"}],"astNodeIds":["fa6829b9-2a08-47d7-8601-33aca6f11f59"]}},{"testCase":{"id":"f1046f17-30bc-46c2-9782-4375920578f9","pickleId":"909d0b43-8ec8-476f-a6b1-bde44db97363","testSteps":[{"id":"6c3b7933-585b-49d9-8508-147480118f5a","hookId":"539f76a6-0830-4389-89ba-ca09b93d68cd"},{"id":"959958c5-f85f-4a30-bb42-5b0f1b35da6f","pickleStepId":"6d0da743-1b14-42ad-aaaa-11bb75388997","stepDefinitionIds":["d3ee5f19-b2ef-4d26-9b90-627239432ddc"],"stepMatchArgumentsLists":[{}]},{"id":"2734d1a8-6c3d-47a4-9eb1-b78712818222","pickleStepId":"87051ef0-79ab-434c-8996-90ebc1485e01","stepDefinitionIds":["7802de5a-1a1c-4b60-bbd3-d8909cd7a95f"],"stepMatchArgumentsLists":[{}]},{"id":"612379e0-fc5b-4f60-bec8-3b2f9ab8f9e5","pickleStepId":"d8b34bf4-f09c-4d4f-95eb-17b4132a04f2","stepDefinitionIds":["568ebfc3-e080-4ea2-b1fb-968e9d5d327c"],"stepMatchArgumentsLists":[{}]},{"id":"2b8e3844-bd56-4e3d-8fd7-14a8dc4d07d3","hookId":"4f25f175-03e2-4570-93f9-b19b705acb1f"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1633861948","nanos":615067400},"testCaseId":"f1046f17-30bc-46c2-9782-4375920578f9","id":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepStarted":{"timestamp":{"seconds":"1633861948","nanos":615067400},"testStepId":"6c3b7933-585b-49d9-8508-147480118f5a","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"5","nanos":638778400}},"timestamp":{"seconds":"1633861954","nanos":253845800},"testStepId":"6c3b7933-585b-49d9-8508-147480118f5a","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepStarted":{"timestamp":{"seconds":"1633861954","nanos":269470700},"testStepId":"959958c5-f85f-4a30-bb42-5b0f1b35da6f","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":272269600}},"timestamp":{"seconds":"1633861955","nanos":541740300},"testStepId":"959958c5-f85f-4a30-bb42-5b0f1b35da6f","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepStarted":{"timestamp":{"seconds":"1633861955","nanos":541740300},"testStepId":"2734d1a8-6c3d-47a4-9eb1-b78712818222","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":263033300}},"timestamp":{"seconds":"1633861955","nanos":804773600},"testStepId":"2734d1a8-6c3d-47a4-9eb1-b78712818222","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepStarted":{"timestamp":{"seconds":"1633861955","nanos":804773600},"testStepId":"612379e0-fc5b-4f60-bec8-3b2f9ab8f9e5","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":657132200}},"timestamp":{"seconds":"1633861956","nanos":461905800},"testStepId":"612379e0-fc5b-4f60-bec8-3b2f9ab8f9e5","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepStarted":{"timestamp":{"seconds":"1633861956","nanos":461905800},"testStepId":"2b8e3844-bd56-4e3d-8fd7-14a8dc4d07d3","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":122198100}},"timestamp":{"seconds":"1633861957","nanos":584103900},"testStepId":"2b8e3844-bd56-4e3d-8fd7-14a8dc4d07d3","testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testCaseFinished":{"timestamp":{"seconds":"1633861957","nanos":584103900},"testCaseStartedId":"341e62de-a636-45d1-bcb5-b02ba19b34f8"}},{"testCase":{"id":"d1d00e5d-4c5c-44e5-9096-6505f63685eb","pickleId":"dcabb4bd-44d3-40d5-9e86-654e7ae7327b","testSteps":[{"id":"838c40f2-a108-4be8-8592-ed3366132da3","hookId":"539f76a6-0830-4389-89ba-ca09b93d68cd"},{"id":"f1329ee3-c445-42cb-b692-9ecaf720f178","pickleStepId":"d1633e7a-13f1-488f-b182-c5d892c8ee92","stepDefinitionIds":["00335dc5-564c-49ae-80e4-c2fbe2b75224"],"stepMatchArgumentsLists":[{}]},{"id":"bcc15d39-829e-441a-95ab-cd722e85bd2e","pickleStepId":"9e9b884d-5854-4408-a5a0-cd00d72e19a7","stepDefinitionIds":["75df8fcc-44df-4e25-9d3a-6571838c2371"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":14,"value":"Rishab"}},{"parameterTypeName":"anonymous","group":{"start":21,"value":"India"}},{"parameterTypeName":"anonymous","group":{"start":27,"value":"Mumbai"}},{"parameterTypeName":"anonymous","group":{"start":34,"value":"123456789"}},{"parameterTypeName":"anonymous","group":{"start":44,"value":"April"}},{"parameterTypeName":"anonymous","group":{"start":50,"value":"22"}}]}]},{"id":"46a9253a-d8c5-4906-ab04-c0dc3f3fc021","pickleStepId":"d63d0e8f-e5f7-491f-a068-9f165cb4a230","stepDefinitionIds":["289feaf9-fbef-4e6f-b87c-c2755094f10c"],"stepMatchArgumentsLists":[{}]},{"

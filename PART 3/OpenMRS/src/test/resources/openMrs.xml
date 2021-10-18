@@ -1,0 +1,7 @@
+<suite name="openmrs">
+<test name="openmrstesting">
+<classes>
+<class name="openMrs.openMRSrunner"/>
+</classes>
+</test>
+</suite>
