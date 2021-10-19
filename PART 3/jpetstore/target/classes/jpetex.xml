@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Jpet_Store">
-	<test name="test_Jpet">
-		<classes>
-			<class name="base.Base"/>
-			<class name="testsuitebddjpet.Jpet_testrunner"/>
-		</classes>
-	</test>
-</suite>

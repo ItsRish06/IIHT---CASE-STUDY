@@ -42,7 +42,7 @@ public class Base {
 	 	report.attachReporter(exthtml);
 	 	report.setSystemInfo("Host Name", "TestSystem");  //name of the system
 	 	report.setSystemInfo("Environment", "Test Env");
-	 	report.setSystemInfo("User Name", "Rashmi");
+	 	report.setSystemInfo("User Name", "Rishab");
 	 	   
 	 	exthtml.config().setDocumentTitle("openMRS");
 	 	exthtml.config().setReportName("OpenMRS Functional Testing");
